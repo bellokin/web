@@ -261,8 +261,11 @@ if(result===true){
 
 })
 
-  
-app.listen(3000,function(req,res){
+let port =process.env.PORT;
+if(port==null||port==""){
+  port=3000;
+}
+app.listen(port,function(req,res){
     console.log("Server Started Sucessfully")
 });
 
